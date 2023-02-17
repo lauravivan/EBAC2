@@ -1,0 +1,30 @@
+@import 'reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+@import 'var';
+@import 'theme';
+@import 'aside';
+@import 'app';
+@import 'form';
+@import 'list';
+@import 'about';
+@import 'settings';
+
+.article {
+    margin-left: 270px;
+    font-family: $hubb;
+
+    @media (max-width: 980px) {
+        margin-left: 0;
+    }
+}
+
+.about {
+    font-family: $hubb;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}

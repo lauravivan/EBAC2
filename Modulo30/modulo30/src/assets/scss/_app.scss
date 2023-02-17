@@ -1,0 +1,35 @@
+.app-background {
+    background-image: url(./../img/movies.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+
+    &__img-container {
+        display: none;
+    }
+}
+
+@media (max-width: 980px) {
+    .app-background {
+        background-image: none;
+        justify-content: center;
+
+        &__title-container {
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__img-container {
+            display: block;
+            width: 320px;
+
+            #home-logo-dark {
+                display: none;
+            }
+        }
+    }
+}

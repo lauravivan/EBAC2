@@ -1,0 +1,45 @@
+.settings-bg {
+    background-color: $light-gray;
+    column-gap: 1rem;
+    height: 100vh;
+    padding-top: 10rem;
+    padding-left: 5rem;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    &__desc {
+        font-size: 1.2rem;
+    }
+
+    &__btn {
+        border: 1px solid $black;
+        border-radius: 250px;
+        padding: 2px;
+        display: flex;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(000,000,000,.6);
+        }
+    }
+
+    &__btn-img {
+        width: 40px;
+        height: auto;
+    }
+
+    #dark {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-bg {
+        padding-top: 10rem;
+        padding-left: 2rem;
+    }
+}

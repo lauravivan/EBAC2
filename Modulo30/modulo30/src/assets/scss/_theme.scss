@@ -1,0 +1,153 @@
+.dark {
+    .aside {
+        background-color: $black;
+    }
+
+    .logo {
+        #logo-light {
+            display: none;
+        }
+
+        #logo-dark {
+            display: block;
+        }
+    }
+
+    .navbar {
+        &__item {
+            color: $white;
+
+            &:hover {
+                background-color: $white;
+                color: $black;
+            }
+        }
+    }
+
+    .form {
+        &__label {
+            color: $white;
+        }
+    }
+
+    .about {
+        background-color: $black;
+
+        &__main {
+            color: $white;
+        }
+
+        &__genre {
+            border-color: $white;
+        }
+
+        &__btn {
+            border: 1px solid $white;
+            color: $white;
+            
+            &:hover {
+                background-image: $bg-lolli;
+            }
+        }
+    }
+}
+
+@media (min-width: 981px) {
+    .dark {
+        .settings-bg, .add-movie-bg, .movie-list-bg {
+            background-image: $bg-lolli;
+        }
+    
+        .form {
+            &__text {
+                background-color: $black;
+                color: $white;
+    
+                &::placeholder {
+                    color: $white;
+                }
+            }
+    
+            &__btn {
+                background-image: $bg-lolli;
+
+                &:hover {
+                    background-color: $black;
+                    background-image: none;
+                    color: $white;
+                }
+            }
+        }
+    
+        .form-search {
+            &__search {
+                background-color: $black;
+                color: $white;
+    
+                &::placeholder {
+                    color: $white;
+                }
+            } 
+        }
+    }
+}
+
+
+@media(max-width: 980px) {
+    .dark {
+        .settings-bg, .add-movie-bg, .movie-list-bg, .app-background {
+            background-image: none;
+            background-color: $black;
+        }
+
+        .app-background {
+            &__img-container {
+                #home-logo-light {
+                    display: none;
+                }
+
+                #home-logo-dark { 
+                    display: block;
+                }
+            }
+        }
+
+        .add-movie-bg {
+            &__title-container {
+                color: $white;
+            }
+        }
+
+        .form {
+            &__genre-label {
+                color: $white;
+            }
+        }
+
+        .form-search {
+            &__img-container {
+                #loupe-light {
+                    display: none;
+                }
+
+                #loupe-dark {
+                    display: block;
+                }
+            }
+        }
+
+        .settings-bg {
+            &__desc {
+                color: $white;
+            }
+        }
+
+        .movie-list-bg {
+            .movies {
+                &__title {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
