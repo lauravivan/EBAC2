@@ -1,35 +1,43 @@
 import '../scss/style.scss'
 
-const video = document.querySelector('#video')
-const button = document.querySelector('#btn-play')
+jQuery (function($) {
+    const videoElement = $('#video')
+    const video = $('#video').get(0)
+    const button = $('#btn-play')
 
-document.querySelector('.fa-pause').style.display = 'none'
+    let faPause = $('.fa-pause')
+    let faPlay = $('.fa-play')
 
-const play = (event) => {
-    if(video.paused) {
-        document.querySelector('.fa-play').style.display = 'none'
-        document.querySelector('.fa-pause').style.display = 'block'
-        video.play()
-    } else {
-        document.querySelector('.fa-play').style.display = 'block'
-        document.querySelector('.fa-pause').style.display = 'none'
-        video.pause()
+    faPause.css('display', 'none')
+
+    const play = (e) => {
+        if (video.paused) {
+            faPlay.css('display','none')
+            faPause.css('display','block')
+            video.play()
+        } else {
+            faPlay.css('display','block')
+            faPause.css('display','none')
+            video.pause()
+        }
     }
-}
 
-button.addEventListener('click', (event) => {
-    play(event)
-})
+    button.click((e) => {
+        play(e)
+    })
 
-video.addEventListener('click', (event) => {
-    play(event)
-})
+    videoElement.click((e) => {
+        play(e)
+    })
 
-video.addEventListener('timeupdate', () => {
-    let current = (video.currentTime / video.duration) * 100
-    if(video.ended) {
-        document.querySelector('.fa-play').style.display = 'block'
-        document.querySelector('.fa-pause').style.display = 'none'
-    }
-    document.querySelector('.inner').style.width = `${current}%`
+    videoElement.on('timeupdate', () => {
+        let current = (video.currentTime / video.duration) * 100
+
+        if (video.ended) {
+            faPlay.css('display', 'block')
+            faPause.css('display', 'none')
+        }
+
+        $('#inner').css('width', `${current}%`)
+    })
 })
