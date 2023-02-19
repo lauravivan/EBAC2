@@ -1,0 +1,88 @@
+@import 'reset';
+@import 'var';
+@import 'main';
+@import 'gallery';
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+$color-font: #fff;
+$color-bg-default: #33f;
+$font-default: Arial, Helvetica, sans-serif;
+
+h1 {
+    color: $color-font;
+    text-align: center;
+    width: 100%;
+}
+
+header {
+    background-color: $color-bg-default;
+    width: 100vw;
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+
+    h1 {
+        margin-top: 4rem;
+        position: relative;
+        z-index: 9;
+    }
+}
+
+.waves {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 110%;
+
+    .wave-01 {
+        animation: wave1 3s ease-in-out infinite alternate;
+        
+    }
+
+    .wave-02 {
+        animation: wave2 3s ease-in-out infinite alternate;
+    }
+
+    .wave-03 {
+        animation: dash1 3s cubic-bezier(0, 1.23, 1, 0.11) infinite alternate;
+        stroke-dasharray: 150;
+        stroke: #fff;
+        stroke-width: 3px;
+    }
+}
+
+@keyframes wave1 {
+    from {
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes wave2 {
+    from {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes wave3 {
+    from {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes dash1 {
+    from {
+       stroke-dashoffset: 2000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@import 'player';
