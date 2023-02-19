@@ -8,28 +8,26 @@
         <title>Framework Simulator</title>
     </head>
     <body>
-        <div id="root">
-
-            <section id="video-container">
-                <h2>Video Player</h2>
-                <div class="container">
-                    <div id="player">
-                        <video id="video" src="./assets/video.mp4"></video>
-                        <div class="controls">
-                            <button id="btn-play">
-                                <i class="fa fa-play"></i>
-                                <i class="fa fa-pause"></i>
-                            </button>
-                            <div class="timeline">
-                                <div class="bar">
-                                    <div class="inner"></div>
-                                </div>
-                            </div>
-                        </div>
+        <main class="player">
+            <video class="player__video" id="video" src="./assets/bellyache.mp4"></video>
+            <div class="player__controls">
+                <div class="player__controls-up">
+                    <button class="player__btn" id="btn-play">
+                        <i class="player__btn-icon fa fa-play"></i>
+                        <i class="player__btn-icon fa fa-pause"></i>
+                    </button>
+                    <div class="btn-container">
+                        <a class="btn-container__btn" href="index.html">Go back</a>
                     </div>
                 </div>
-            </section>
+                <div class="player__timeline">
+                    <div class="player__bar">
+                        <div class="player__inner" id="inner"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-        </div>
+        <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
     </body>
 </html>
