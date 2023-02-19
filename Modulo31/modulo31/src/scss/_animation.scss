@@ -1,0 +1,55 @@
+body {
+    overflow-x: hidden;
+}
+
+.animation {
+    &__waves {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 110%;
+    }
+
+    &__wave1 {
+        animation: wave1;
+        animation-duration: 4s;
+        animation-timing-function: cubic-bezier(0.1, 1, 1, 1);
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    &__wave2 {
+        animation: wave2;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    &__wave3 {
+        animation: wave3;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+
+@keyframes wave1 {
+    from {
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes wave2 {
+    from {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes wave3 {
+    from {
+        transform: translateX(-20px);
+    }
+}
